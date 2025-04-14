@@ -1,8 +1,5 @@
 name: Java Test
 
-
-
-
 on:
   pull_request:
     branches:
@@ -11,9 +8,9 @@ on:
       branches:
         - main
 jobs:
-  build: Test on Windows
+  build:git
+  name: Test on Windows
   runs-on: window-latest
-
   steps:
     - name: checkout code
       uses: actions/checkout@v3
@@ -25,4 +22,9 @@ jobs:
         java-version: '24'
     - name: Build and test on windows
       run: nvm clean verify
+
+
+
+
+
 
